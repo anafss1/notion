@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: "Raleway", serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 2px solid #000000;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #d09c0b;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fi fi-rr-house-chimney"></i> Home</a>
+		<a id="fitness" onclick="navigate(this.id)" href="#"> <i class="fi fi-rs-gym"></i> Fitness</a>
+		<a id="finances" onclick="navigate(this.id)" href="#"> <i class="fi fi-rr-usd-circle"></i> Finances</a>
+		<a id="journal" onclick="navigate(this.id)" href="#"> <i class="fi fi-rr-newspaper-open"></i> Journal</a>
+		<a id="contents" onclick="navigate(this.id)" href="#"> <i class="fi fi-sr-browser"></i> Contents</a>
+
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'home')
+				window.open("https://www.notion.so/d-a-s-h-b-o-a-r-d-292880da4d1445f0988aae97bd6015b0?pvs=18", '_blank').focus();
+			else if (id == "fitness")
+				window.open("https://www.notion.so/Fitness-96ac8908730f41d086d5b7095e397bc3?pvs=25", '_blank').focus();
+			else if (id == "finances")
+				window.open("https://www.notion.so/Finances-cfa181eadaab4c91a30bbe821e09b8fd?pvs=25", '_blank').focus();
+			else if (id == "journal")
+				window.open("https://www.notion.so/Journal-3a990e5517424c0797d9abf2a30d1853?pvs=25", '_blank').focus();
+			else if (id == "contents")
+				window.open("https://www.notion.so/Contents-f086c19f3bac47f98091ba6254a2b91e?pvs=25", '_blank').focus();
+			
+
+		}
+	</script>
+
+
+</body>
+
+</html>
